@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+:root {
+
+
+    /* ### Primary */
+
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    /* ### Neutral  */
+    --PaleBlue: hsl(243, 100%, 93%);
+    --GrayishBlue: hsl(229, 7%, 55%);
+    --DarkBlue: hsl(228, 56%, 26%);
+    --VeryDarkBlue: hsl(229, 57%, 11%);
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    background: var(--VeryDarkBlue);
+    background-image: url("./images/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 350px;
+    overflow: hidden;
+}
+
+
+
+
+main {
+    width: 70%;
+    height: 100vh;
+    min-width: 280px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    min-width: 604px;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.fylo-container {
+    width: 270px;
+    height: 100%;
+    min-width: 270px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: var(--DarkBlue);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 70px;
+}
+
+.logo {
+    width: 110px;
+}
+
+.icons {
+    display: flex;
+    gap: .7rem;
+
+
+    /* background-color: aqua; */
+
+}
+
+.icon {
+    background-color: var(--VeryDarkBlue);
+    padding: .5rem;
+    width: 37px;
+    height: 37px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+
+.data-storage {
+    background-color: var(--DarkBlue);
+    width: 50%;
+    min-width: 270px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    border-radius: 8px;
+    padding: 2rem;
+    position: relative;
+    gap: 1rem;
+
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+
+    width: 100%;
+    height: 15px;
+    background: var(--VeryDarkBlue);
+    border-radius: 30px;
+    border: 2px solid var(--VeryDarkBlue);
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    background-size: 70% 100%;
+    background-repeat: no-repeat;
+    margin: 0rem .2rem;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 11px;
+    width: 11px;
+    border-radius: 100%;
+    background: white;
+    cursor: pointer;
+    box-shadow: 0 0 2px 0 #555;
+    transition: background .3s ease-in-out;
+
+}
+
+
+.data-storage p {
+    font-size: .8rem;
+    color: hsl(243, 100%, 81%);
+
+}
+
+.data-storage>p>span {
+    font-weight: 700;
+    color: var(--PaleBlue);
+}
+
+.range-start-end {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -.5rem;
+}
+
+.range-start-end p {
+    font-weight: 700;
+    color: var(--PaleBlue);
+}
+
+.comment {
+    position: absolute;
+
+    background-color: white;
+    right: 20px;
+    top: -50px;
+    height: 80px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px !important;
+
+    border-top-right-radius: 8px;
+    padding: 1rem;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 81% 75%, 0 75%);
+}
+
+.comment p {
+
+    color: var(--GrayishBlue);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 700;
+}
+
+.comment p span {
+    color: black;
+    font-size: 2rem;
+
+    margin-top: -.5rem;
+}
+
+
+@media screen and (max-width:600px) {
+
+    body {
+        background-image: url("./images/bg-mobile.png");
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+
+    main {
+        width: 100%;
+
+    }
+
+    .container {
+        flex-direction: column;
+
+        min-width: 0;
+    }
+
+    .comment {
+        clip-path: none;
+        border-bottom-right-radius: 8px;
+        height: 60px;
+        top: 100px;
+        right: 60px;
+    }
+
+    .data-storage p {
+        font-size: .7rem;
+        text-align: center;
+
+
+    }
+}
