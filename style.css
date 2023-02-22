@@ -146,7 +146,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 
-.data-storage p {
+.data-storage h1 {
     font-size: .8rem;
     color: hsl(243, 100%, 81%);
 
